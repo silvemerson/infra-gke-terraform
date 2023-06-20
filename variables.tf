@@ -1,7 +1,7 @@
 variable "gcp_project" {
   description = "Projeto para provisionamento da infra"
   type        = string
-  default     = "root-sanctuary-389315" #Project ID
+  default     = "ID_PROJECT" #Project ID
 }
 
 variable "default_region" {
