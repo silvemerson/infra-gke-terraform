@@ -7,7 +7,7 @@ variable "gcp_project" {
 variable "default_region" {
   description = "Região padrão de provisionamento"
   type        = string
-  default     = "us-central1"
+  default     = "us-central1" #Region
 }
 
 variable "default_zone" {
