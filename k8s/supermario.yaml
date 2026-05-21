@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supermario
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: supermario
+  template:
+    metadata:
+      labels:
+        app: supermario
+    spec:
+      containers:
+      - name: supermario
+        image: apengbai/docker-supermario
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: supermario
+spec:
+  type: LoadBalancer
+  selector:
+    app: supermario
+  ports:
+  - port: 80
+    targetPort: 8080

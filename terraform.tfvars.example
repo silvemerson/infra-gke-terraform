@@ -1,0 +1,28 @@
+# Copie este arquivo para terraform.tfvars e preencha com seus valores
+# cp terraform.tfvars.example terraform.tfvars
+
+# Obrigatório: caminho para o JSON da service account
+gcp_credentials_file = "/home/usuario/Downloads/minha-chave.json"
+
+# Obrigatório: ID do projeto GCP
+gcp_project = "meu-projeto-gcp"
+
+# Região e zona (opcional, já tem defaults)
+default_region = "us-central1"
+default_zone   = "us-central1-c"
+
+# Cluster GKE
+cluster_name   = "sparta-cluster"
+node_size      = "e2-medium"
+node_count     = 1
+disk_size_gb   = 50
+spot_nodes     = false
+min_node_count = 0
+max_node_count = 6
+
+# Firewall
+network_name  = "default"
+firewall_name = "asgard-prod-allow"
+
+# Super Mario
+supermario_replicas = 1

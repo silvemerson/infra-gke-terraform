@@ -1,0 +1,18 @@
+# OpenTofu / Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Arquivo de variáveis com valores reais (não commitar!)
+terraform.tfvars
+*.auto.tfvars
+
+# Kubeconfig gerado pelo OpenTofu (contém credenciais)
+kubeconfig.yaml

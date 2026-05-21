@@ -1,7 +1,8 @@
 resource "google_compute_firewall" "asgard_prod_allow" {
-  name    = "asgard-prod-allow"
-  network = "default"
-  
+  name    = var.firewall_name
+  network = var.network_name
+
+  depends_on = [google_project_service.compute]
 
   allow {
     protocol = "tcp"
